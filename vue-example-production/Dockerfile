@@ -1,9 +1,9 @@
 # build
 FROM node:lts-alpine as build
 WORKDIR /app
-COPY package*.json ./
+COPY example-project/package*.json ./
 RUN npm install
-COPY ../example-project .
+COPY example-project .
 RUN npm run build
 
 # production

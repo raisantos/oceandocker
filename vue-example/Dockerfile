@@ -13,7 +13,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copia o codigo fonte do projeto para o diretorio de trabalho
-COPY ../example-project .
+COPY . .
 
 # Faz o build do projeto
 RUN npm run build
